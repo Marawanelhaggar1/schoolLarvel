@@ -25,12 +25,22 @@ Route::group(
                 'prefix'=>'buildings',
             ],
             function(){
-                
-                    Route::get('/', 'BuildingsController@index'); 
+
+                    Route::get('/', 'BuildingsController@index');
                     Route::post('/', 'BuildingsController@create');
                     Route::put('/', 'BuildingsController@update');
                     Route::delete('/{id}', 'BuildingsController@delete');
-                                
+
+            }
+        );
+
+        Route::group(
+            ['prefix' => 'classrooms'],
+            function(){
+                 Route::get('/', 'ClassroomController@index');
+                    Route::post('/', 'ClassroomController@create');
+                    Route::put('/', 'ClassroomController@update');
+                    Route::delete('/{id}', 'ClassroomController@delete');
             }
         );
     }

@@ -17,11 +17,5 @@ class Classroom extends Model
         return $this->belongsTo(Buildings::class);
     }
 
-    public function students(){
-        return $this->belongsToMany(Student::class);
-    }
 
-     public function taechers(){
-        return $this->belongsToMany(Teachers::class);
-    }
 }
